@@ -1,3 +1,4 @@
+
 def displayResult(choice):
     if choice == "r":
         print("Rock blunts scissors")
