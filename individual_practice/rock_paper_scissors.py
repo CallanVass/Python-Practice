@@ -1,24 +1,24 @@
 
-def displayResult(choice):
-    if choice == "r":
-        print("Rock blunts scissors")
-    elif choice == "p":
-        print("Paper wraps rock")
-    else:
-        print("Scissors cuts paper")
-    return
+# def displayResult(choice):
+#     if choice == "r":
+#         print("Rock blunts scissors")
+#     elif choice == "p":
+#         print("Paper wraps rock")
+#     else:
+#         print("Scissors cuts paper")
+#     return
 
 
 
 
 
 
-p1Choice = "r"
-p2Choice = "p"
+# p1Choice = "r"
+# p2Choice = "p"
 
-if p1Choice == p2Choice:
-    print("It's a draw!")
-elif 
+# if p1Choice == p2Choice:
+#     print("It's a draw!")
+# elif 
 
 
 
@@ -47,3 +47,9 @@ elif
 #   CALL DisplayResult(p2Choice)
 #   Output "player 2 wins" 
 # End
+
+celsius = int(input())
+
+farenheit = (celsius * 9 // 5) + 32
+
+print(f"The result is: {farenheit}")
