@@ -63,18 +63,46 @@
 #WEATHER CHALLENGE
 
 
-def weather_function(rain, temp):
-    if rain:
-        if temp < 15:
-            return "It's wet and cold"
-        else:
-            return"It's warm and raining"
-    else:
-        if temp < 15:
-            return "It's not raining but cold"
-        else:
-            return "It's warm but not raining"
+# def weather_function(rain, temp):
+#     if rain:
+#         if temp < 15:
+#             return "It's wet and cold"
+#         else:
+#             return"It's warm and raining"
+#     else:
+#         if temp < 15:
+#             return "It's not raining but cold"
+#         else:
+#             return "It's warm but not raining"
         
-print(weather_function(True, 14))
+# print(weather_function(True, 14))
+
+
+
+# ACME CORP CHALLENGES
+
+coding_dict = {
+    "python": 1,
+    "ruby": 2,
+    "bash": 4,
+    "git": 8,
+    "html": 16,
+    "tdd": 32,
+    "css": 64,
+    "javascript": 128
+
+}
+coding_list = ("")
+
+#enter coding languages, plus them together
+
+print("Python, Ruby, Bash, Git, HTML, TDD, CSS, Javascript")
+coding_score = input("From the list above, and seperated by only a space, please enter which languages you're proficient in: ")
+coding_list = coding_score.split()
+print("You chose: ", coding_list)
+i = 0
+while i < len(coding_list) -1:
+
+
 
 
