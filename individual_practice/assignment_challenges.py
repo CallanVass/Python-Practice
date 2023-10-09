@@ -134,8 +134,6 @@ print(f"You're total coding score is: {new_coding_list}!")
 
 all_p_languages = [lang.lower() for lang in all_p_languages]
 
-coding_list = [lang.lower() for lang in coding_list]
-
 all_p_languages = [lang for lang in all_p_languages if lang not in coding_list]
 
 all_p_languages = [lang.capitalize() for lang in all_p_languages]
