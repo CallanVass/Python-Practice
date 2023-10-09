@@ -81,27 +81,68 @@
 
 # ACME CORP CHALLENGES
 
-coding_dict = {
-    "python": 1,
-    "ruby": 2,
-    "bash": 4,
-    "git": 8,
-    "html": 16,
-    "tdd": 32,
-    "css": 64,
-    "javascript": 128
+# def coding_names():
+#     python = 1
+#     ruby = 2
+#     bash = 4
+#     git = 8
+#     html = 16
 
-}
-coding_list = ("")
 
-#enter coding languages, plus them together
+# coding_dict = {
+#     "python": 1,
+#     "ruby": 2,
+#     "bash": 4,
+#     "git": 8,
+#     "html": 16,
+#     "tdd": 32,
+#     "css": 64,
+#     "javascript": 128
 
+# }
+# coding_list = ("")
+
+
+all_p_languages = ["Python", "Ruby", "Bash", "Git", "HTML", "TDD", "CSS", "Javascript"]
 print("Python, Ruby, Bash, Git, HTML, TDD, CSS, Javascript")
 coding_score = input("From the list above, and seperated by only a space, please enter which languages you're proficient in: ")
 coding_list = coding_score.split()
 print("You chose: ", coding_list)
-i = 0
-while i < len(coding_list) -1:
+
+new_coding_list = 0
+
+for p_language in coding_list:
+    if p_language.lower() == "python":
+        new_coding_list += 1
+    elif p_language.lower() == "ruby":
+        new_coding_list += 2
+    elif p_language.lower() == "bash":
+        new_coding_list += 4
+    elif p_language.lower() == "git":
+        new_coding_list += 8
+    elif p_language.lower() == "html":
+        new_coding_list += 16
+    elif p_language.lower() == "tdd":
+        new_coding_list += 32
+    elif p_language.lower() == "css":
+        new_coding_list += 64
+    elif p_language.lower() == "javascript":
+        new_coding_list += 128
+
+
+print(f"You're total coding score is: {new_coding_list}!")
+
+all_p_languages = [lang.lower() for lang in all_p_languages]
+
+coding_list = [lang.lower() for lang in coding_list]
+
+all_p_languages = [lang for lang in all_p_languages if lang not in coding_list]
+
+all_p_languages = [lang.capitalize() for lang in all_p_languages]
+
+print(f"You may want to learn about: {all_p_languages}")
+
+#create another for loop with if statements to handle the addition of new languages in coding_list
 
 
 
