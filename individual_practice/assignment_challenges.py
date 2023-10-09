@@ -105,10 +105,10 @@
 
 all_p_languages = ["Python", "Ruby", "Bash", "Git", "HTML", "TDD", "CSS", "Javascript"]
 print("Python, Ruby, Bash, Git, HTML, TDD, CSS, Javascript")
-coding_score = input("From the list above, and seperated by only a space, please enter which languages you're proficient in: ")
+coding_score = input("From the list above, and separated by only a space, please enter which languages you're proficient in: ")
 coding_list = coding_score.split()
 print("You chose: ", coding_list)
-
+    
 new_coding_list = 0
 
 for p_language in coding_list:
@@ -140,9 +140,30 @@ all_p_languages = [lang for lang in all_p_languages if lang not in coding_list]
 
 all_p_languages = [lang.capitalize() for lang in all_p_languages]
 
-print(f"You may want to learn about: {all_p_languages}")
 
-#create another for loop with if statements to handle the addition of new languages in coding_list
+language_scores = {
+    "Python": 'Python: 1 point',
+    "Ruby": "Ruby: 2 points",
+    "Bash": "Bash: 4 points",
+    "Git": "Git: 8 points",
+    "Html": "HTML: 16 points",
+    "Tdd": "TDD: 32 points",
+    "Css": "CSS: 64 points",
+    "Javascript": "JavaScript: 128 points"
+}
+
+def assign_scores(languages):
+    scores = []
+    for lang in languages:
+        if lang in language_scores:
+            scores.append(language_scores[lang])
+    return scores
+
+if not assign_scores(all_p_languages):
+    print("You're perfect!")
+else:
+    print(f"You may want to learn about: {assign_scores(all_p_languages)}")
+  
 
 
 
