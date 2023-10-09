@@ -63,13 +63,25 @@
 # else:
 # bank_card_list = bank_card.split()
 
-bank_card = input("Please enter your credit card number here: ")
+# bank_card = input("Please enter your credit card number here: ")
 
-if bank_card[0] == "4" and len(bank_card) in range(13, 17):
-    print("Your bank number is: " + bank_card[1:5])
-    print("Your account number is " + bank_card[5:-1])
-else:
-    print(len(bank_card))
-    print("This is not a valid Visa card number.")
+# if bank_card[0] == "4" and len(bank_card) in range(13, 17):
+#     print("Your bank number is: " + bank_card[1:5])
+#     print("Your account number is " + bank_card[5:-1])
+# else:
+#     print(len(bank_card))
+#     print("This is not a valid Visa card number.")
 
+
+def ten_pin(bowl_1, bowl_2, bowl_3):
+    inclusive = bowl_1 + bowl_2 + bowl_3
+    if bowl_1 + bowl_2 >= 10:
+        return inclusive 
+    elif bowl_1 == 10:
+        return inclusive 
+    elif bowl_1 + bowl_2 < 10:
+        return bowl_1 + bowl_2
+ 
+    
+print(ten_pin(3, 10, 10))
 
