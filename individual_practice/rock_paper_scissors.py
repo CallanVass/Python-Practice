@@ -75,13 +75,11 @@
 
 def ten_pin(bowl_1, bowl_2, bowl_3):
     inclusive = bowl_1 + bowl_2 + bowl_3
-    if bowl_1 + bowl_2 >= 10:
+    if bowl_1 + bowl_2 == 10 or bowl_1 == 10:
         return inclusive 
-    elif bowl_1 == 10:
-        return inclusive 
-    elif bowl_1 + bowl_2 < 10:
+    else:
         return bowl_1 + bowl_2
  
     
-print(ten_pin(3, 10, 10))
+print(ten_pin(0, 10, 10))
 
