@@ -32,7 +32,7 @@
 #     arr[i + 1] = arr[i]
 #     print(arr)
 
-#COMPLETED CODE SNIPPET TO ORGANISE AN UNORGANISE LIST INTO ASCENDING ORDER
+#COMPLETED CODE SNIPPET TO ORGANISE AN UNORGANISE LIST INTO ASCENDING ORDER (which turned out to be not what they wanted. Code rewrote below to do exactly as asked)
 
 
 # # Original list
@@ -58,6 +58,54 @@
 #     #If the if statement doesn't meet it's conditions, add one to i (to continue iteration)
 #     else: 
 #         i += 1
+
+
+#Rewritten code
+
+# arr = [5, 22, 29, 39, 19, 51, 78, 96, 84]
+
+# i = 0
+
+# while i < len(arr) - 1:
+
+#     if arr[i] > arr[i + 1]:
+#         place_holder = arr[i]
+#         arr[i] = arr[i + 1]
+#         arr[i + 1] = place_holder
+#         print(arr)
+#         break
+#     else:
+#         i += 1
+    
+
+# arr = [5, 22, 29, 39, 19, 51, 78, 96, 84]
+
+# i = 0
+
+# while i < len(arr) - 1:
+
+#     if arr[i] > arr[i + 1]:
+#         place_holder = arr[i]
+#         arr[i] = arr[i + 1]
+#         arr[i + 1] = place_holder
+#         print(arr)
+#         break
+#     else:
+#         i += 1
+
+
+# arr = [5, 22, 29, 39, 19, 51, 78, 96, 84]
+# i = 0
+# while (i < len(arr) -1):
+#     i += 1 
+#     if arr[i] > arr[i+1]:
+#         temp = arr[i]
+#         arr[i] = arr[i+1]
+#         arr[i + 1] = temp
+#         print(arr)
+#         break
+     
+
 
 
 #WEATHER CHALLENGE
@@ -103,66 +151,75 @@
 # coding_list = ("")
 
 
-all_p_languages = ["Python", "Ruby", "Bash", "Git", "HTML", "TDD", "CSS", "Javascript"]
-print("Python, Ruby, Bash, Git, HTML, TDD, CSS, Javascript")
-coding_score = input("From the list above, and separated by only a space, please enter which languages you're proficient in: ")
-coding_list = coding_score.split()
-print("You chose: ", coding_list)
+# all_p_languages = ["Python", "Ruby", "Bash", "Git", "HTML", "TDD", "CSS", "Javascript"]
+# print("Python, Ruby, Bash, Git, HTML, TDD, CSS, Javascript")
+# coding_score = input("From the list above, and separated by only a space, please enter which languages you're proficient in: ")
+# coding_list = coding_score.split()
+# print("You chose: ", coding_list)
     
-new_coding_list = 0
+# new_coding_list = 0
 
-for p_language in coding_list:
-    if p_language.lower() == "python":
-        new_coding_list += 1
-    elif p_language.lower() == "ruby":
-        new_coding_list += 2
-    elif p_language.lower() == "bash":
-        new_coding_list += 4
-    elif p_language.lower() == "git":
-        new_coding_list += 8
-    elif p_language.lower() == "html":
-        new_coding_list += 16
-    elif p_language.lower() == "tdd":
-        new_coding_list += 32
-    elif p_language.lower() == "css":
-        new_coding_list += 64
-    elif p_language.lower() == "javascript":
-        new_coding_list += 128
-
-
-print(f"You're total coding score is: {new_coding_list}!")
-
-all_p_languages = [lang.lower() for lang in all_p_languages]
-
-all_p_languages = [lang for lang in all_p_languages if lang not in coding_list]
-
-all_p_languages = [lang.capitalize() for lang in all_p_languages]
+# for p_language in coding_list:
+#     if p_language.lower() == "python":
+#         new_coding_list += 1
+#     elif p_language.lower() == "ruby":
+#         new_coding_list += 2
+#     elif p_language.lower() == "bash":
+#         new_coding_list += 4
+#     elif p_language.lower() == "git":
+#         new_coding_list += 8
+#     elif p_language.lower() == "html":
+#         new_coding_list += 16
+#     elif p_language.lower() == "tdd":
+#         new_coding_list += 32
+#     elif p_language.lower() == "css":
+#         new_coding_list += 64
+#     elif p_language.lower() == "javascript":
+#         new_coding_list += 128
 
 
-language_scores = {
-    "Python": 'Python: 1 point',
-    "Ruby": "Ruby: 2 points",
-    "Bash": "Bash: 4 points",
-    "Git": "Git: 8 points",
-    "Html": "HTML: 16 points",
-    "Tdd": "TDD: 32 points",
-    "Css": "CSS: 64 points",
-    "Javascript": "JavaScript: 128 points"
-}
+# print(f"You're total coding score is: {new_coding_list}!")
 
-def assign_scores(languages):
-    scores = []
-    for lang in languages:
-        if lang in language_scores:
-            scores.append(language_scores[lang])
-    return scores
+# all_p_languages = [lang.lower() for lang in all_p_languages]
 
-if not assign_scores(all_p_languages):
-    print("You're perfect!")
-else:
-    print(f"You may want to learn about: {assign_scores(all_p_languages)}")
+# all_p_languages = [lang for lang in all_p_languages if lang not in coding_list]
+
+# all_p_languages = [lang.capitalize() for lang in all_p_languages]
+
+
+# language_scores = {
+#     "Python": 'Python: 1 point',
+#     "Ruby": "Ruby: 2 points",
+#     "Bash": "Bash: 4 points",
+#     "Git": "Git: 8 points",
+#     "Html": "HTML: 16 points",
+#     "Tdd": "TDD: 32 points",
+#     "Css": "CSS: 64 points",
+#     "Javascript": "JavaScript: 128 points"
+# }
+
+# def assign_scores(languages):
+#     scores = []
+#     for lang in languages:
+#         if lang in language_scores:
+#             scores.append(language_scores[lang])
+#     return scores
+
+# if not assign_scores(all_p_languages):
+#     print("You're perfect!")
+# else:
+#     print(f"You may want to learn about: {assign_scores(all_p_languages)}")
   
 
 
 
 
+# def sum_to_one_hundred():
+#     result = 1
+#     for num in range(101):
+#         result += num
+#         print(f"{num + 1}: {result}")
+#     return result
+
+
+# print(sum_to_one_hundred())
