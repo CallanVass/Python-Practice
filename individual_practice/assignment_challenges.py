@@ -223,3 +223,30 @@
 
 
 # print(sum_to_one_hundred())
+
+
+
+prime_list = []
+for i in range(2, 101):
+    prime = True
+    for x in range(2, i):
+        if (i % x) == 0:
+            prime = False
+            break
+    if prime:
+        prime_list.append(i)
+
+
+
+print(prime_list)
+            
+#CREATE prime_list
+#FOR loop (i) within range of 2 to 101
+#IF for loop is still within it's range, CREATE prime = True
+#Nested FOR loop (x) to check if the number given by the previous loop meets conditions for new IF statement (below)
+#IF statement to see if (x) is divisible by anything other than (i) and 1
+#If IF statement is found to be true, then prime = False and break from the line
+#IF statement linked to (x) loop. IF prime = True, append the number to prime_list
+
+
+
