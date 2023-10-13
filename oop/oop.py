@@ -64,3 +64,31 @@ class Library:
             if book['title'] == title:
                 return book
         return None
+    
+
+class Book:
+    def __init__ (self, name, genre, pages):
+        self.name = name
+        self.genre = genre
+        self.pages = pages
+        
+    def set_name(self, new_name):
+        if not isinstance(new_name, str) or len(new_name) > 20:
+            print("Name must be a string and below 20 characters")
+        else:
+            self.name = new_name
+    
+
+class Participant:
+    def __init__ (self):
+        self.points = 0
+        self.choice = ""
+
+class GameRound:
+    pass
+class Game:
+    def __init__ (self):
+        self.endGame = False
+        self.participant = Participant()
+        self.secondParticipant = Participant()
+    
