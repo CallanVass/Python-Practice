@@ -18,18 +18,35 @@ class Student:
         print(f"Name: {self.name} Age: {self.age}")
 
 class BankAccount:
-    def __init__(self, acc_num, balance):
-        self.acc_num = acc_num
+    def __init__(self, name, balance):
+        self.name = name
         self.balance = balance
     
     def deposit(self, amount):
         self.balance += amount
+    
+    def check_balance(self):
+        return print(self.balance)
 
     def withdraw(self, amount):
         if amount <= self.balance:
             self.balance -= amount
         else: 
             print("Insufficient funds.")
+
+    def transfer(self, trans_amount, name):
+        if trans_amount <= self.balance:
+            self.balance -= trans_amount
+            if isinstance(name, BankAccount):
+                name.deposit(trans_amount)
+                print("")
+            else: 
+                print("Please enter a valid name.")
+        else: 
+            print("Insufficient funds for transfer.")
+
+
+
 
 class Library:
     def __init__(self):

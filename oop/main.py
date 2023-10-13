@@ -1,6 +1,6 @@
-from oop import Student
+# from oop import Student
 from oop import BankAccount
-from oop import Library
+# from oop import Library
 
 # my_rectangle1 = Rectangle(5, 4)
 # print(my_rectangle1.width)
@@ -12,18 +12,26 @@ from oop import Library
 # print(student.name)
 # print(student.age)
 
-# callans_bank = BankAccount("666", 1000)
+#Main
+acc1 = BankAccount("Callan", 1000)
+acc2 = BankAccount("Sarah", 1500)
+
+acc1.deposit(1000)
+acc2.deposit(2000)
+
+acc1.check_balance()
+acc2.check_balance()
+
+acc1.transfer(1000, acc2)
+
+acc1.check_balance()
+acc2.check_balance()
 
 
-# callans_bank.deposit(1000)
-
-# print(callans_bank.acc_num)
-
-# callans_bank.withdraw(1500)
 
 
-my_library = Library()
+# my_library = Library()
 
-my_library.add_book("Sumtingwong", "CallanVass", 664)
-my_library.add_book("Sumtin666gwong", "Calla666nVass", 665)
-print(my_library.display_books())
+# my_library.add_book("Sumtingwong", "CallanVass", 664)
+# my_library.add_book("Sumtin666gwong", "Calla666nVass", 665)
+# print(my_library.display_books())
