@@ -79,16 +79,22 @@ class Book:
             self.name = new_name
     
 
-class Participant:
-    def __init__ (self):
-        self.points = 0
-        self.choice = ""
-
-class GameRound:
+class Player:
     pass
-class Game:
-    def __init__ (self):
-        self.endGame = False
-        self.participant = Participant()
-        self.secondParticipant = Participant()
+
+class Board:
+    def __init__(self, matrix):
+        self.matrix = [["", "", ""],
+                       ["", "", ""],
+                       ["", "", ""]]
+   
+    
+        
+
+
+#Tick Tack Toe
+
+#Hash class, 3 rows (matrix) initialised
+#rounds/tally for each time someone wins
+#Player objects
     
