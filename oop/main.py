@@ -49,84 +49,60 @@ from oop import Book
 #Hash class, 3 rows (matrix) initialised
 #rounds/tally for each time someone wins
 #Player objects
-import random
-
-game_matrix = [["1", "2", "3"],
-                ["4", "5", "6"],
-                ["7", "8", "9"]]
-
-winning_dict = {
-    "Player_1_wins": 0,
-    "Player_2_wins": 0
-}
-
-print("Welcome to TICK TACK TOE!")
-player_1 = input("Please enter the name of the first Player: ")
-player_2 = input("Please enter the second Player: ")
 
 
+# game_matrix = [[" ", " ", " "],
+#                 [" ", " ", " "],
+#                 [" ", " ", " "]]
 
-print(f"{player_1} will be going first! They are 'x'")
+# winning_dict = {
+#     "Player_1_wins": 0,
+#     "Player_2_wins": 0
+# }
 
+# print("Welcome to TICK TACK TOE!")
+# player_1 = input("Please enter the name of the first Player: ")
+# player_2 = input("Please enter the second Player: ")
 
-for line in game_matrix:
-    print(line)
+# player_1_mark = "X"
+# player_2_mark = "O"
 
 
 
-def player_1_loop():
-    anchor = True
-    while anchor:
-        move = input("Please enter the number you wish to place your mark on: ")
-        match move:
-            case "1":
-                game_matrix[0][0] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "2":
-                game_matrix[0][1] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "3":
-                game_matrix[0][2] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "4":
-                game_matrix[1][0] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "5":
-                game_matrix[1][1] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "6":
-                game_matrix[1][2] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "7":
-                game_matrix[2][0] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "8":
-                game_matrix[2][1] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-            case "9":
-                game_matrix[2][2] = "X"
-                for line in game_matrix:
-                    print(line)
-                return
-player_1_loop()
+# print(f"{player_1} will be going first! They are 'X'")
 
 
 
 
-#Only have 1 go per player
+def check_winner(board, player):
+    pass
+    #Check for the conditions of the winner
+
+def check_draw(board):
+    pass
+    #Check for the conditions of a draw
+
+def get_player_move():
+    pass
+    #Get player input for move
+def tic_tac_toe_game():
+    pass
+
+
+
+
+def display_board(board):
+    for col in board:
+        print(" | ".join(col))
+        print("-" * 9)
+        if col == board[2]:
+            break
+
+
+
+
+game_board = [[" ", " ", " "],
+             [" ", " ", " "],
+             [" ", " ", " "]]
+
+display_board(game_board)
